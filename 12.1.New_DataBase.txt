@@ -1,0 +1,44 @@
+Client
+|id_client|name        |age|email           |phone        |avarage_income|id_credit|
+|---------|------------|---|----------------|-------------|--------------|---------|
+|C1       |Ivanov_I.I. |25 |Ivanov@gmail.ru |+375292222222|2000          |Cr_Auto  |
+|C3       |Kirov_S.S.  |32 |Kirov@gmail.ru  |+375294444444|10000         |Cr_In    |
+|C4       |Romanov_P.P.|40 |Romanov@gmail.ru|+375295555555|4000          |Cr_Con   |
+|C2       |Smirnov_A.A.|45 |Smirnov@gmail.ru|+375293333333|100000        |Cr_H     |
+
+
+Credit_issued
+|id_credit_issued|id_credit|id_client|sum_issued|date_issued|
+|----------------|---------|---------|----------|-----------|
+|1               |Cr_Auto  |C1       |15000     |2021-05-31 |
+|2               |Cr_H     |C2       |100000    |2021-05-28 |
+|3               |Cr_In    |C3       |10000     |2021-05-20 |
+|4               |Cr_Con   |C4       |4000      |2021-05-30 |
+
+Credit_type
+|id_credit|credit_title   |Id_ Credit_Type|
+|---------|---------------|---------------|
+|Cr_Auto  |Auto_Credit    |1              |
+|Cr_H     |Home_Credit    |2              |
+|Cr_In    |Instant_Credit |3              |
+|Cr_Con   |Consumer_Credit|4              |
+
+
+Credit_conditions
+|id_conditions|credit_title   |max_sum|persent|credit_period|
+|-------------|---------------|-------|-------|-------------|
+|CAuto        |Auto_Credit    |100000 |15     |3 years      |
+|Cr_H         |Home_Credit    |500000 |10     |20 years     |
+|Cr_In        |Instant_Credit |1000   |40     |2 years      |
+|Cr_Con       |Consumer_Credit|2000   |25     |4 years      |
+
+
+Credit_transaction
+|id_transaction|id_client|id_credit|sum|date      |payment_system|
+|--------------|---------|---------|---|----------|--------------|
+|1             |C1       |Cr_Auto  |500|2021-05-31|card          |
+|3             |C2       |Cr_H     |700|2021-06-12|AlfaBank      |
+|4             |C3       |Cr_In    |200|2021-06-01|BSB           |
+|5             |C4       |Cr_Con   |100|2021-06-01|BNB           |
+
+
